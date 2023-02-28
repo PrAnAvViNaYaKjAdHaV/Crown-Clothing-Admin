@@ -4,6 +4,7 @@ import uniqid from "uniqid";
 import { productContext } from "../context/product.context";
 const Category = () => {
   const { categoryItems, setCategory } = useContext(productContext);
+  console.log(categoryItems);
   return (
     <div className="w-60">
       <h1 className="text-3xl">Category</h1>
