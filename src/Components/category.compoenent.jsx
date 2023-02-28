@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 // import SHOP_DATA from "../shop-data";
 import { productContext } from "../context/product.context";
 import { Data } from "../firebase/firebase";
