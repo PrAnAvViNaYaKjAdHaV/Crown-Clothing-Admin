@@ -18,6 +18,7 @@ export const ProudctProvider = ({ children }) => {
     const getData = async () => {
       try {
         const data = await Data();
+        console.log(data);
         setCategoryItems(data);
       } catch (e) {
         console.log(e);
