@@ -14,18 +14,18 @@ export const productContext = createContext({
 export const ProudctProvider = ({ children }) => {
   const [category, setCategory] = useState();
   const [categoryItems, setCategoryItems] = useState([]);
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const data = await Data();
-        console.log(data);
-        setCategoryItems(data);
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    return () => getData();
-  }, []);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const data = await Data();
+  //       console.log(data);
+  //       setCategoryItems(data);
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   };
+  //   return () => getData();
+  // }, []);
   const AddItemtoCategory = async (imageUrl, name, price) => {
     if (category === undefined) return;
     const categoryItemsref = categoryItems.map((item) => {
