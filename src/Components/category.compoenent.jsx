@@ -20,7 +20,7 @@ const Category = () => {
   return (
     <div className="w-60">
       <h1 className="text-3xl">Category</h1>
-      {categoryItems === null ? (
+      {categoryItems.length === 0 ? (
         <p
           className="text-xl p-2  bg-slate-100 m-3 border-r-8 rounded-md"
           onClick={() => getData()}
