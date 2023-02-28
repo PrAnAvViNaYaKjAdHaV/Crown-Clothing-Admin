@@ -1,9 +1,22 @@
 import React, { useContext } from "react";
 // import SHOP_DATA from "../shop-data";
-import uniqid from "uniqid";
 import { productContext } from "../context/product.context";
+import { Data } from "../firebase/firebase";
 const Category = () => {
-  const { categoryItems, setCategory } = useContext(productContext);
+  const { categoryItems, setCategory, setCategoryItems } =
+    useContext(productContext);
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await Data();
+        console.log(data);
+        setCategoryItems(data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    return () => getData();
+  }, []);
   console.log(categoryItems);
   return (
     <div className="w-60">

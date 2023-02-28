@@ -69,6 +69,7 @@ export const ProudctProvider = ({ children }) => {
     setCategory,
     AddItemtoCategory,
     RemoveItemFromCategory,
+    setCategoryItems,
   };
   return (
     <productContext.Provider value={value}>{children}</productContext.Provider>
