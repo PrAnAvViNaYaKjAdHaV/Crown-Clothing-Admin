@@ -15,7 +15,7 @@ const Category = () => {
         console.log(e);
       }
     };
-    return () => getData();
+    getData();
   }, []);
   console.log(categoryItems);
   return (
