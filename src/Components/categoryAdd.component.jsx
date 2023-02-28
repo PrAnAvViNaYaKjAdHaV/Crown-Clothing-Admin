@@ -20,6 +20,7 @@ const CategoryAdd = () => {
           <input
             type="text"
             className="border border-solid border-gray-500"
+            value={imageUrl}
             onChange={(e) => {
               setImageUrl(e.target.value);
             }}
@@ -30,6 +31,7 @@ const CategoryAdd = () => {
           <input
             type="text"
             className="border border-solid border-gray-500"
+            value={name}
             onChange={(e) => {
               setName(e.target.value);
             }}
@@ -40,6 +42,7 @@ const CategoryAdd = () => {
           <input
             type="text"
             className="border border-solid border-gray-500"
+            value={price}
             onChange={(e) => {
               setPrice(e.target.value);
             }}

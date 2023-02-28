@@ -34,11 +34,19 @@ function App() {
           />
         )}
       </div>
-      <div className="flex mt-8">
-        <Category />
-        <CategoryItem />
-        <CategoryAdd />
-      </div>
+
+      {User === null ? (
+        <div className="flex h-40 items-center justify-center">
+          <h1 className="text-2xl mr-3">Plzz login</h1>
+          <FcGoogle size={26} />
+        </div>
+      ) : (
+        <div className="flex mt-8">
+          <Category />
+          <CategoryItem />
+          <CategoryAdd />
+        </div>
+      )}
     </div>
   );
 }
