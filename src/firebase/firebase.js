@@ -19,7 +19,7 @@ const firebaseConfig = {
   projectId: "clw-auth-30699",
   storageBucket: "clw-auth-30699.appspot.com",
   messagingSenderId: "740425172278",
-  appId: "1:740425172278:web:0b71866091e4a70c7c9f97",
+  appId: "1:740425172278:web:30fa569edb1a86987c9f97",
 };
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
