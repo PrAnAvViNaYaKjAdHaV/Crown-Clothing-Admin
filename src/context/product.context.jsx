@@ -16,8 +16,12 @@ export const ProudctProvider = ({ children }) => {
   const [categoryItems, setCategoryItems] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await Data();
-      setCategoryItems(data);
+      try {
+        const data = await Data();
+        setCategoryItems(data);
+      } catch (e) {
+        console.log(e);
+      }
     };
     return () => getData();
   }, []);
