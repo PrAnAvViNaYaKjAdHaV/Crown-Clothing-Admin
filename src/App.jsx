@@ -36,8 +36,13 @@ function App() {
       </div>
 
       {User === null ? (
-        <div className="flex h-40 items-center justify-center">
+        <div className="flex h-96 items-center justify-center">
           <h1 className="text-2xl mr-3">Plzz login</h1>
+          <FcGoogle size={26} />
+        </div>
+      ) : User.email !== "pj8841466@gmail.com" ? (
+        <div className="flex h-96 items-center justify-center">
+          <h1 className="text-2xl mr-3">Plzz login With Admin id</h1>
           <FcGoogle size={26} />
         </div>
       ) : (
